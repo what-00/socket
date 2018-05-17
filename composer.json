@@ -1,0 +1,7 @@
+{
+    "name": "what00/socket",
+    "type": "library",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "require": {}
+}
