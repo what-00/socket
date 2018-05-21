@@ -2,12 +2,16 @@
 
 require_once 'vendor/autoload.php';
 
-$proxy_ip = '36.66.213.167';
+$proxy_ip = '127.0.0.1';
 $proxy_prot = '1080';
+
 $server_ip = '198.41.214.88';
 $server_prot = '80';
 try {
-    $socket = new What00\Socket\SocksProxy4($proxy_ip, $proxy_prot);
+    // $socket = new What00\Socket\SocksProxy4($proxy_ip, $proxy_prot);
+    // $proxy_socket = $socket->target($server_ip, $server_prot);
+
+    $socket = new What00\Socket\SocksProxy5($proxy_ip, $proxy_prot);
     $proxy_socket = $socket->target($server_ip, $server_prot);
 
     $request = "GET / HTTP/1.1\r\n";
